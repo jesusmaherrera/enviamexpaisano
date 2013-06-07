@@ -10,6 +10,7 @@
 		<table class="table tableCell table-hover">
 			<tr>
 				<th>Id</th>
+				<th>Imagen</th>
 				<th>Descripcion</th>
 				<th>Fecha salida</th>
 				<th>Fecha llegada</th>
@@ -41,6 +42,7 @@
 					{{ envio.id }}
 					{% endif %}
 				</td>
+				<th><img src='{{MEDIA_URL}}{{envio.imagen.value}}' style="height: 50px; width: 50px; margin-top:.5em; margin-right:.5em; margin-bottom:.5em;"  class="align-left"/></th>
 				<td>{{ envio.descripcion }}</td>
 				<td>{{ envio.fecha_salida }}</td>
 				<td>{{ envio.fecha_llegada }}</td>
