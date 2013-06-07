@@ -1,4 +1,4 @@
 *.log
 *.pot
 *.pyc
-enviamex/settings.py
+#settings/common.py
