@@ -1,5 +1,4 @@
 *.log
 *.pot
 *.pyc
-local_settings.py
-enviamex/enviamex/setting.py
+enviamex/settings.py
