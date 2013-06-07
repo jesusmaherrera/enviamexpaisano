@@ -1,9 +1,13 @@
 from django.conf.urls import patterns, include, url
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
+
 import autocomplete_light
 autocomplete_light.autodiscover()
+
+from django.conf.urls.static import static
 # Uncomment the next two lines to enable the admin:
+from django.conf import settings
 from django.contrib import admin
 admin.autodiscover()
 
@@ -37,7 +41,7 @@ urlpatterns = patterns('',
     (r'^servicios/$', 'envios.views.serviciosView'),
     (r'^recepcion/$', 'envios.views.recepcionView'),
     (r'^dinero/$', 'envios.views.dineroView'),
-    
+
     # url(r'^enviamex/', include('enviamex.foo.urls')),
     #imagenes
     url(r'^media/(?P<path>.*)$','django.views.static.serve',
@@ -48,6 +52,6 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
-)
+) 
 
 urlpatterns += staticfiles_urlpatterns()
