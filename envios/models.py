@@ -45,6 +45,7 @@ class Envio(models.Model):
 	estado = models.CharField(max_length=10, choices=ESTADOS, default='PE')
 
 	usuario = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
+	imagen = models.ImageField(blank=True, null=True, upload_to='envios', verbose_name='Imagen')
 
 	def __unicode__(self):
 		return self.descripcion
